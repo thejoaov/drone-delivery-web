@@ -168,7 +168,7 @@ export default function Home() {
         </Grid>
 
         <Grid item xs={12} sm={6} display="flex" flex={1} flexDirection="row">
-          {lastRoutes.length && (
+          {lastRoutes.length ? (
             <List sx={{ width: "100%", maxWidth: 360 }}>
               <Typography variant="h4">Last Deliveries</Typography>
               {lastRoutes.reverse().map((route) => (
@@ -185,7 +185,7 @@ export default function Home() {
                 </ListItem>
               ))}
             </List>
-          )}
+          ) : null}
         </Grid>
       </Grid>
     </Container>
