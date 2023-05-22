@@ -15,5 +15,5 @@ RUN yarn build
 FROM node:16
 WORKDIR /app
 COPY --from=builder /app .
-EXPOSE 8080
-CMD ["yarn", "start"]
+EXPOSE $PORT
+CMD ["yarn", "dev"]
